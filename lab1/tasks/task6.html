@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+    <script>
+        let product  = ["Інжир", "Ізюм", "Імбир", "Ікра", "Ірис"];
+        let quantity = [105, 213, 48, 30, 351];
+        let cost     = [26, 90.5, 64, 189, 2.5];
+
+        let index = -1;
+
+        function fun1() {
+            let name = document.getElementById("productName").value.toLowerCase().trim();
+
+            index = -1;
+            for (let i = 0; i < product.length; i++) {
+                if (product[i].toLowerCase() === name) {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index === -1) {
+                document.getElementById("outputQuantity").value = "Такого товару немає";
+                document.getElementById("outputCost").value = "";
+            } else {
+                document.getElementById("outputQuantity").value = "Кількість: " + quantity[index];
+                document.getElementById("outputCost").value = "Вартість за одиницю: " + cost[index];
+            }
+
+            document.getElementById("total").textContent = "";
+        }
+
+        function fun2() {
+            let total = document.getElementById("total");
+
+            if (index === -1) {
+                total.textContent = "Спершу знайдіть товар";
+                return;
+            }
+
+            let sum = quantity[index] * cost[index];
+            total.textContent = sum
+        }
+    </script>
+</head>
+<body>
+    <h3>Завдання 6</h3>
+
+    <form>
+        <p>Введіть назву товару:</p>
+        <input type="text" id="productName">
+        <input type="button" value="Наявна кількість і вартість" onclick="fun1()"> <br> <br>
+        <input type="text" size="70" id="outputQuantity" readonly>
+        <input type="text" size="70" id="outputCost" readonly> <br> <br>
+        <input type="button" value="Загальна сума" onclick="fun2()">
+    </form>
+
+    <p id="total"></p>
+</body>
+</html>
