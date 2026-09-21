@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5</title>
+    <script>
+        function calculate() {
+            let x = 12;
+            let y = 5;
+            let result = (1 - Math.pow(x, 2)) / Math.pow(y, 3);
+            alert(result);
+        }
+
+        function onFieldClick() {
+            document.getElementById("field2").value = "Ти клікнув на перше поле"
+        }
+        function onFieldSelect() {
+            document.getElementById("field2").value = "Ти вибрав текст на першому полі"
+        }
+
+        function calculateTask4() {
+            let x = Number(document.getElementById("numberX").value);
+            let y = Number(document.getElementById("numberY").value);
+            if (x < 10 || y > 3) {
+                window.alert(Math.pow(x, 2) + Math.pow(y, 2));
+            }
+            else if (x > 2) {
+                window.alert(x - y + Math.pow(x, 2));
+            }
+            else {
+                window.alert(Math.pow(x, 3) + 3 * x * y);
+            }
+        }
+
+        function factorial(n) {
+            if (n <= 1) {
+                return 1;
+            }
+            return n * factorial(n-1);
+        }
+
+        function calculateTask5() {
+            let x = Number(document.getElementById("numberX2").value);
+            let y = Number(document.getElementById("numberY2").value);
+            
+            let sum = 0;
+            for (let i = 7; i <= 11; i++) {
+                sum += Math.pow(-1, i) * (x + y - factorial(i)) / factorial(i - 1);
+            }
+            alert(sum);
+        }
+    </script>
+</head>
+<body>
+    <h3>Завдання 5</h3>
+    <p>Це звичайний HTML абзац.</p>
+    <script>
+        document.write("Іванюк Юрій Олегович");
+    </script>
+    <br>
+
+    <button onclick="alert('29.01.2006, Івано-Франківськ')">Натисни на мене</button>
+    <p>Натисни на кнопку щоб порахувати F = (1-x^2) / y^3</p>
+    <button onclick="calculate()">Кнопка</button>
+
+    <form>
+        <input type="text" id="field1" onclick="onFieldClick()" onselect="onFieldSelect()">
+        <input type="text" id="field2">
+    </form>
+
+    <img src="../images/формула.png">
+    <form>
+        <input type="number" id="numberX" placeholder="x">
+        <input type="number" id="numberY" placeholder="y"> <br>
+        <input type="button" value="Calculate" onclick="calculateTask4()">
+    </form>
+
+    <img src="../images/формула2.png">
+    <form>
+        <input type="number" id="numberX2" placeholder="x">
+        <input type="number" id="numberY2" placeholder="y"> <br>
+        <input type="button" value="Calculate" onclick="calculateTask5()">
+    </form>
+</body>
+</html>
