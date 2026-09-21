@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Завдання 3</title>
+    <title>Завдання 4</title>
     <script>
         function calculate() {
             let x = 12;
@@ -18,10 +18,24 @@
         function onFieldSelect() {
             document.getElementById("field2").value = "Ти вибрав текст на першому полі"
         }
+
+        function calculateTask4() {
+            let x = document.getElementById("numberX").value;
+            let y = document.getElementById("numberY").value;
+            if (x < 10 || y > 3) {
+                window.alert(Math.pow(x, 2) + Math.pow(y, 2));
+            }
+            else if (x > 2) {
+                window.alert(x - y + Math.pow(x, 2));
+            }
+            else {
+                window.alert(Math.pow(x, 3) + 3 * x * y);
+            }
+        }
     </script>
 </head>
 <body>
-    <h3>Завдання 3</h3>
+    <h3>Завдання 4</h3>
     <p>Це звичайний HTML абзац.</p>
     <script>
         document.write("Іванюк Юрій Олегович");
@@ -35,6 +49,13 @@
     <form>
         <input type="text" id="field1" onclick="onFieldClick()" onselect="onFieldSelect()">
         <input type="text" id="field2">
+    </form>
+
+    <img src="../images/формула.png">
+    <form>
+        <input type="number" id="numberX" placeholder="x">
+        <input type="number" id="numberY" placeholder="y"> <br>
+        <input type="button" value="Calculate" onclick="calculateTask4()">
     </form>
 </body>
 </html>
