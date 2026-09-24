@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №5</title>
+
+</head>
+
+<body>
+    <a href="../lab2.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <h1>Завдання №5</h1>
+    <script>
+        console.info("Інформаця");
+
+        console.warn("Попередження");
+
+        console.error("Помилка");
+
+        let user = { name: "Юра", age: 20, skills: ["JS", "C#"] };
+        console.dir(user);
+        console.dir(document.body);
+
+        console.dirxml(document.body);
+
+        console.time("цикл");
+        let sum = 0;
+        for (let i = 0; i < 1000000; i++) {
+            sum += i;
+        }
+        console.timeEnd("цикл");
+
+        console.profile("Мій профіль");
+        let s = 0;
+        for (let i = 0; i < 10000000; i++) {
+            s += Math.sqrt(i);
+        }
+        console.profileEnd("Мій профіль");
+
+        let x = 5;
+        console.assert(x > 0, "x має бути додатним");
+        console.assert(x > 10, "x має бути більше 10");
+    </script>
+</body>
+
+</html>
