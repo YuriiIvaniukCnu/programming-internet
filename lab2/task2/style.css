@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+}
+
+#calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 400px;
+}
+
+.normal-button {
+    border-radius: 30px;
+    padding: 20px;
+    border: 0;
+    background-color: #6d6b6b;
+    color: white;
+    font-size: 2em;
+}
+
+.operation-button {
+    background-color: #969292;
+}
+
+.delete-button {
+    color: rgb(226, 98, 81);
+}
+
+#equals-button {
+    background-color: #4caf50;
+}
+
+#calculator-display {
+    width: 400px;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    color: white;
+}
