@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №6</title>
+
+</head>
+
+<body>
+    <a href="../lab2.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <h1>Завдання №6</h1>
+    <script>
+        let names = ["Anna", "Bob", "Emma", "John", "Mike", "Chad","Mike", "Ivan", "Yura"];
+        let vowels = "AEIOU";
+
+        for (let i = 0; i < names.length; i++) {
+            let firstLetter = names[i][0].toUpperCase();
+
+            if (vowels.includes(firstLetter)) {
+                console.log("Goodbye " + names[i]);
+            } else {
+                console.log("Hello " + names[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>
