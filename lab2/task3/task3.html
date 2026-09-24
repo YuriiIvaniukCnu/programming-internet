@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №3</title>
+    <script src="task3.js" defer></script>
+</head>
+<body>
+    <a href="../lab2.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <h1>A = 11i + j</h1></p>
+    <h3>Для варіантів 3, 8, 13, 18, 23, 28 підрахувати суму елементів третього стовпця.</h3>
+
+    <form id="matrix-form" style="display: flex; flex-direction: column; width: 200px;">
+        <label for="rows-number">Кількість рядків:</label> 
+        <input id="rows-number" type="number" min="1"> <br>
+
+        <label for="columns-number">Кількість стовпців:</label> 
+        <input id="columns-number" type="number" min="1"> <br>
+
+        <input type="button" value="Побудувати матрицю" onclick="buildMatrix()"> 
+        <input type="button" value="Розрахувати" onclick="calculateMatrix()"> 
+
+        <label for="sumDisplay">Сума: </label>
+        <input type="text" readonly id="sumDisplay">
+    </form>
+
+    <table id="tableMatrix" border="1""></table>
+</body>
+</html>
