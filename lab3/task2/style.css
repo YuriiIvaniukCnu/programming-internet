@@ -11,9 +11,11 @@
     margin-bottom: 20px;
     background-color: white;
     align-items: center;
+    border: 3px solid rgb(144, 150, 155);
+    border-radius: 5px;
 }
 
-#displayInput {
+#displayOutput {
     width: 90%;
     font-size: 4rem;
     text-align: right;
