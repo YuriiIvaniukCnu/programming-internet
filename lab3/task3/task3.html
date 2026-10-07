@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="task3.js" defer></script>
+</head>
+<body>
+    <a href="../lab3.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <div id="calculator">
+        <div id="display">
+            <input type="text" id="displayOutput" readonly>
+            <input type="text" id="displayOperations" readonly>
+        </div>
+
+        <div id="buttons">
+            <button onclick="addCharacter(7)" id="b7" style="grid-area: b7;" class="button numButton">7</button>
+            <button onclick="addCharacter(8)" id="b8" style="grid-area: b8;" class="button numButton">8</button>
+            <button onclick="addCharacter(9)" id="b9" style="grid-area: b9;" class="button numButton">9</button>
+            <button onclick="deleteLast()" id="bDel" style="grid-area: bDel;" class="button specialButton">-></button>
+            <button onclick="clearDisplay()" id="bClear" style="grid-area: bClear;" class="button">C</button>
+            <button onclick="addCharacter(4)" id="b4" style="grid-area: b4;" class="button numButton">4</button>
+            <button onclick="addCharacter(5)" id="b5" style="grid-area: b5;" class="button numButton">5</button>
+            <button onclick="addCharacter(6)" id="b6" style="grid-area: b6;" class="button numButton">6</button>
+            <button onclick="addCharacter('×')" id="bMultiply" style="grid-area: bMultiply;" class="button basicOperation">×</button>
+            <button onclick="addCharacter('÷')" id="bDivide" style="grid-area: bDivide;" class="button basicOperation">÷</button>
+            <button onclick="addCharacter(1)" id="b1" style="grid-area: b1;" class="button numButton">1</button>
+            <button onclick="addCharacter(2)" id="b2" style="grid-area: b2;" class="button numButton">2</button>
+            <button onclick="addCharacter(3)" id="b3" style="grid-area: b3;" class="button numButton">3</button>
+            <button onclick="addCharacter('-')" id="bSubtract" style="grid-area: bSubtract;" class="button basicOperation">-</button>
+            <button onclick="calculateResult()" id="bEquals" style="grid-area: bEquals;" class="button">=</button>
+            <button onclick="changeSign()" id="bChangeSign" style="grid-area: bChangeSign;" class="button specialButton">+/-</button>
+            <button onclick="addCharacter(0)" id="b0" style="grid-area: b0;" class="button numButton">0</button>
+            <button onclick="addCharacter('.')" id="bDecimal" style="grid-area: bDecimal;" class="button numButton">.</button>
+            <button onclick="addCharacter('+')" id="bAdd" style="grid-area: bAdd;" class="button basicOperation">+</button>
+        </div>
+    </div>
+</body>
+</html>

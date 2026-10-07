@@ -1,0 +1,76 @@
+#calculator {
+    background-color: lightblue;
+    width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: white;
+    align-items: center;
+    border: 3px solid rgb(144, 150, 155);
+    border-radius: 5px;
+}
+
+#displayOutput {
+    width: 90%;
+    font-size: 4rem;
+    text-align: right;
+    border: none;
+}
+
+#displayOperations {
+    width: 90%;
+    font-size: 2rem;
+    color: gray;
+    text-align: right;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+#buttons {
+    width: 600px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template:
+        "b7 b8 b9 bDel bClear" 100px
+        "b4 b5 b6 bMultiply bDivide" 100px
+        "b1 b2 b3 bSubtract bEquals" 100px
+        "bChangeSign b0 bDecimal bAdd bEquals" 100px / 1fr 1fr 1fr 1fr 1fr; 
+}
+
+.button {
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(144, 150, 155);
+}
+
+.numButton {
+    color: rgb(32, 94, 151);
+}
+
+.basicOperation {
+    background-color: rgb(124, 125, 126);
+    color: aliceblue;
+}
+
+.specialButton {
+    background-color: rgb(167, 165, 165);
+    color: aliceblue;
+}
+
+#bClear {
+    background-color: red;
+    color:aliceblue;
+}
+
+#bEquals {
+    background-color: rgb(32, 94, 151);
+    color: aliceblue;
+}
