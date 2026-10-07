@@ -15,6 +15,14 @@
             <input type="text" id="displayOperations" readonly>
         </div>
 
+        <button onclick="toggleMode()" id="bToggleMode">Переключити на Інженерний</button>
+        <div id="engineeringButtons" style="display: none;">
+            <button onclick="squareRoot()" class="button specialButton">√</button>
+            <button onclick="square()" class="button specialButton">x²</button>
+            <button onclick="sine()" class="button specialButton">sin</button>
+            <button onclick="cosine()" class="button specialButton">cos</button>
+        </div>
+
         <div id="buttons">
             <button onclick="addCharacter(7)" id="b7" style="grid-area: b7;" class="button numButton">7</button>
             <button onclick="addCharacter(8)" id="b8" style="grid-area: b8;" class="button numButton">8</button>
