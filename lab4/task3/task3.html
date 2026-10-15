@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Завднання №3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="task3.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <button class="burger" type="button" onclick="toggleMenu()">☰</button>
+        <ul class="menu" id="menu">
+            <li><a href="../lab4.html">Головна</a></li>
+            <li><a href="#test">Тест</a></li>
+            <li><a href="#results">Результати</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Дуже складні питання про Lord of the Rings</h1>
+
+    <div class="tabs">
+        <button class="tab active" id="tab-test" type="button" onclick="showTab('test')">Тестування</button>
+        <button class="tab" id="tab-theory" type="button" onclick="showTab('theory')">Теоретичні відомості</button>
+    </div>
+
+    <section id="test" class="tab-content active">
+        <p>1) Хто викував Єдиний Перстень?</p>
+        <label><input type="radio" name="q1" value="Саурон">Саурон</label>
+        <label><input type="radio" name="q1" value="Більбо">Більбо</label>
+        <label><input type="radio" name="q1" value="Гендальф">Гендальф</label>
+        <label><input type="radio" name="q1" value="Dumbledore">Dumbledore</label>
+
+        <p>2) Скільки членів було у Братстві Персня?</p>
+        <label><input type="radio" name="q2" value="3">3</label>
+        <label><input type="radio" name="q2" value="12">12</label>
+        <label><input type="radio" name="q2" value="9">9</label>
+        <label><input type="radio" name="q2" value="222">222</label>
+
+        <p>3) Скільки країн брали участь у битві біля Чорної Брами?</p>
+        <label><input type="checkbox" name="q3" value="Рівенділ">Рівенділ</label>
+        <label><input type="checkbox" name="q3" value="Гондор">Гондор</label>
+        <label><input type="checkbox" name="q3" value="Роган">Роган</label>
+        <label><input type="checkbox" name="q3" value="Дейл">Дейл</label>
+
+        <p>4) Кому з персонажів більше за 100 років?</p>
+        <label><input type="checkbox" name="q4" value="Гендальф">Гендальф</label>
+        <label><input type="checkbox" name="q4" value="Араґорн">Араґорн</label>
+        <label><input type="checkbox" name="q4" value="Ґімлі">Ґімлі</label>
+        <label><input type="checkbox" name="q4" value="Леголас">Леголас</label>
+
+        <p>5) Скільки існувало назгулів?</p>
+        <select id="q5" name="q5">
+            <option value="1">1</option>
+            <option value="4">4</option>
+            <option value="7">7</option>
+            <option value="9">9</option>
+        </select>
+
+        <p>6) Виберіть всіх чарівників</p>
+        <select id="q6" name="q6" multiple>
+            <option value="Алькос">Алькос</option>
+            <option value="Саруман">Саруман</option>
+            <option value="Гендальф">Гендальф</option>
+            <option value="Байл">Байл</option>
+        </select>
+
+        <p>7) Скільки перснів отримали ельфи?</p>
+        <input id="q7" type="text" name="q7">
+
+        <p><button onclick="checkTest()">Завершити</button></p>
+        <div id="results"></div>
+    </section>
+
+    <section id="theory" class="tab-content">
+        <h2>Персні Влади</h2>
+        <p>У Другу Епоху ельфійські ковалі Ереґіону викували Персні Влади: три дістались ельфам, сім - дворфам, дев'ять — людям. Саурон потай викував у вогні Ородруїну Єдиний Перстень, щоб підкорити собі всі інші.</p>
+
+        <h2>Назгули</h2>
+        <p>Дев'ятеро людських володарів, що отримали Персні, із часом стали назгулами - Примарами Персня, безвольними слугами Саурона. Найсильніший із них — Король-Чаклун Анґмару.</p>
+
+        <h2>Братство Персня</h2>
+        <p>На раді в Рівенділі вирішили, що Перстень понесе загін із дев'ятьох — стільки ж, скільки Чорних Вершників. До нього увійшли гобіти Фродо, Сем, Мері й Піпін, маг Гендальф, люди Араґорн і Боромир, ельф Леголас і дворф Ґімлі.</p>
+
+        <h2>Вік героїв</h2>
+        <p>Гендальф — майар, дух, що прибув у Середзем'я близько тисячі років тому. Ельфи безсмертні, і Леголасові щонайменше кілька століть, хоча точного віку Толкін не називає. Ґімлі на час походу 139 років. Араґорн, попри довге життя дунаданів, тоді ще не досяг сотні — йому 87.</p>
+
+        <h2>Чарівники</h2>
+        <p>Істарі — п'ятеро майар, посланих у Середзем'я протистояти Сауронові: Саруман Білий, Гендальф Сірий, Радагаст Бурий і двоє Синіх магів, що пішли на схід.</p>
+
+        <h2>Битва біля Чорної Брами</h2>
+        <p>Остання битва Війни за Перстень, біля Мораннону — головних воріт Мордору. Військо Заходу під проводом Араґорна складалося переважно з ґондорців і роганців.</p>
+    </section>
+</main>
+</body>
+</html>
