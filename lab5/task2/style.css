@@ -1,0 +1,16 @@
+input.valid {
+    border: 1px solid green;
+}
+
+input.invalid {
+    border: 1px solid red;
+    color: red;
+}
+
+span.valid {
+    color: green;
+}
+
+span.invalid {
+    color: red;
+}
