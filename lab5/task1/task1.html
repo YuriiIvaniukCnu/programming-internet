@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання №1</title>
+    <script>
+        const regular = /^([a-z\d][a-z\d.]{4,28}[a-z\d])(@)([a-z]{2,20})(\.[a-z]{2,10})$/
+        let result = "myfavemail@ukr.net".match(regular);
+
+        for (let i = 0; i < result.length; i++) {
+            console.log(result[i]);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
