@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №2</title>
+    <script src="task2.js" defer></script>
+</head>
+<body>
+    <a href="../lab7.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <h1>Завдання №2</h1>
+
+    <h3>2.1</h3>
+    <p>Завдання 2.1.Виведення поточної дати, дня тижня і часу</p>
+    <input type="button" value="Виконати" id="dateButton">
+    <p id="dateOutput"></p>
+
+    <h3>2.2 Останній день місяця за заданим роком та номером місяця</h3>
+    <form style="display: flex; flex-direction: column; width: 300px;">
+        <label for="year">Рік:</label>
+        <input type="number" id="year"> <br>
+
+        <label for="month">Номер місяця (1-12):</label>
+        <input type="number" id="month" min="1" max="12"> <br>
+
+        <input type="button" value="Визначити" id="lastDayButton"> <br>
+
+        <label for="lastDayOutput">Останній день місяця:</label>
+        <input type="text" id="lastDayOutput" readonly>
+    </form>
+
+    <h3>2.3 Кількість секунд від початку сьогоднішнього дня і до початку наступного</h3>
+    <form style="display: flex; flex-direction: column; width: 300px;">
+        <input type="button" value="Порахувати" id="secondsButton"> <br>
+
+        <label for="passedOutput">Пройшло від початку дня:</label>
+        <input type="text" id="passedOutput" readonly> <br>
+
+        <label for="leftOutput">Залишилось до наступного дня:</label>
+        <input type="text" id="leftOutput" readonly>
+    </form>
+</body>
+</html>
