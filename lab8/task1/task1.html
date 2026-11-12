@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №1</title>
+    <script src="task1.js" defer></script>
+</head>
+<body>
+    <a href="../lab8.html" style="position: fixed; top: 10px; right: 10px;">Назад</a>
+    <h1>Завдання №1</h1>
+    <h3>Приклади створення JavaScript-анімацій з теоретичних відомостей.</h3>
+
+    <h4>Приклад 1. Анімація через setInterval</h4>
+    <div style="position: relative; width: 500px; height: 40px; border: 1px solid black;">
+        <div id="train" style="position: absolute; left: 0; width: 100px; height: 40px; background: brown;"></div>
+    </div> <br>
+    <input type="button" value="Запустити" id="trainButton">
+
+    <h4>Приклад 2. Анімація через requestAnimationFrame (функція animate)</h4>
+    <div style="width: 500px; height: 20px; border: 1px solid black;">
+        <div id="progress" style="width: 0; height: 100%; background: green;"></div>
+    </div> <br>
+    <input type="button" value="Запустити" id="progressButton">
+
+    <h4>Приклад 3. Функції часу</h4>
+    <div style="position: relative; width: 500px; height: 50px; border: 1px solid black;">
+        <div id="box" style="position: absolute; left: 0; width: 50px; height: 50px; background: steelblue;"></div>
+    </div> <br>
+    <select id="timing">
+        <option value="linear">linear</option>
+        <option value="quad">quad (степінь 2)</option>
+        <option value="circ">circ (дуга)</option>
+        <option value="back">back (постріл з лука)</option>
+        <option value="bounce">bounce (відскоки)</option>
+        <option value="elastic">elastic (пружна анімація)</option>
+        <option value="bounceEaseOut">bounce + easeOut</option>
+        <option value="bounceEaseInOut">bounce + easeInOut</option>
+    </select>
+    <input type="button" value="Запустити" id="boxButton">
+
+    <h4>Приклад 4. Підстрибуючий м&#39;яч (easeOut)</h4>
+    <div id="field" style="position: relative; width: 200px; height: 200px; border: 1px solid black;">
+        <div id="ball" style="position: absolute; top: 0; left: 80px; width: 40px; height: 40px; border-radius: 50%; background: orange;"></div>
+    </div> <br>
+    <input type="button" value="Запустити" id="ballButton">
+
+    <h4>Приклад 5. Анімація набору тексту</h4>
+    <textarea id="textArea" rows="4" cols="60" readonly></textarea> <br> <br>
+    <input type="button" value="Запустити" id="textButton">
+</body>
+</html>
